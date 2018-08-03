@@ -1,0 +1,10 @@
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\bin\Debug\WpfApp.exe.config
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\bin\Debug\WpfApp.exe
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\bin\Debug\WpfApp.pdb
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.csprojAssemblyReference.cache
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.Form1.resources
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.Properties.Resources.resources
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.GenerateResource.cache
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.csproj.CoreCompileInputs.cache
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.exe
+C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\WpfApp\WpfApp\obj\Debug\WpfApp.pdb

@@ -1,0 +1,11 @@
+C:\Users\joslynk\Desktop\C#\readXMLApplication\bin\Debug\netcoreapp2.1\readXMLApplication.deps.json
+C:\Users\joslynk\Desktop\C#\readXMLApplication\bin\Debug\netcoreapp2.1\readXMLApplication.runtimeconfig.json
+C:\Users\joslynk\Desktop\C#\readXMLApplication\bin\Debug\netcoreapp2.1\readXMLApplication.runtimeconfig.dev.json
+C:\Users\joslynk\Desktop\C#\readXMLApplication\bin\Debug\netcoreapp2.1\readXMLApplication.dll
+C:\Users\joslynk\Desktop\C#\readXMLApplication\bin\Debug\netcoreapp2.1\readXMLApplication.pdb
+C:\Users\joslynk\Desktop\C#\readXMLApplication\obj\Debug\netcoreapp2.1\readXMLApplication.csprojAssemblyReference.cache
+C:\Users\joslynk\Desktop\C#\readXMLApplication\obj\Debug\netcoreapp2.1\readXMLApplication.csproj.CoreCompileInputs.cache
+C:\Users\joslynk\Desktop\C#\readXMLApplication\obj\Debug\netcoreapp2.1\readXMLApplication.AssemblyInfoInputs.cache
+C:\Users\joslynk\Desktop\C#\readXMLApplication\obj\Debug\netcoreapp2.1\readXMLApplication.AssemblyInfo.cs
+C:\Users\joslynk\Desktop\C#\readXMLApplication\obj\Debug\netcoreapp2.1\readXMLApplication.dll
+C:\Users\joslynk\Desktop\C#\readXMLApplication\obj\Debug\netcoreapp2.1\readXMLApplication.pdb
