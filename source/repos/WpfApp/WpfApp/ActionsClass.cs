@@ -7,13 +7,15 @@ namespace WpfApp
     public class ActionsClass
     {
         public static XmlDocument xmlFile = LoadXML();
+        public static string[] default_sceneStrings = new string[4];
         public static string[] sceneStrings = new string[4];
+        public static string xmlPath = "";
         public static string bacDeviceID = "";
-
         public static string bacPointRefSensor = "";
         public static string bacPointRefPIC = "";
         public static string scenePointID = "";
 
+        
 
         public static XmlDocument LoadXML(string xmlFilePath = "C:\\Users\\joslynk\\Documents\\SourceTree\\MVM-lighting\\template.xml")
         {
@@ -156,15 +158,23 @@ namespace WpfApp
 
                     while (childNode != null)
                     {
-                        if (childNode.Name == "dpList")
+                        if (name.Contains("Scene"))
                         {
-                            XmlNode lvDataPoint = childNode.FirstChild;
-                            UID = lvDataPoint.Attributes["UID"].InnerText;
-                        }
-                        if ((UID.Equals(scenePointID)) && ((childNode.Name == "text") && (name.Contains("Scene"))))
-                        {
-                            sceneStrings[j] = childNode.InnerText;
-                            j++;
+                            if (childNode.Name == "dpList")
+                            {
+                                XmlNode lvDataPoint = childNode.FirstChild;
+                                UID = lvDataPoint.Attributes["UID"].InnerText;
+                            }
+                            if (UID.Equals(scenePointID))
+                            {
+                                if (childNode.Name.Contains("text"))
+                                {
+                                    default_sceneStrings[j] = childNode.InnerText;
+                                    sceneStrings[j] = childNode.InnerText;
+                                    j++;
+                                }
+
+                            }
                         }
                         childNode = childNode.NextSibling;
                     }
@@ -253,6 +263,26 @@ namespace WpfApp
         public static string getScene(int index)
         {
             return sceneStrings[index];
+        }
+
+        public static void setdefaultScene(int index, string scene)
+        {
+            default_sceneStrings[index] = scene;
+        }
+
+        public static string getdefaultScene(int index)
+        {
+            return default_sceneStrings[index];
+        }
+
+        public static XmlDocument getXmlDocument()
+        {
+            return xmlFile;
+        }
+
+        public static void setXmlDocument(XmlDocument doc)
+        {
+            xmlFile = doc;
         }
     }
 }
