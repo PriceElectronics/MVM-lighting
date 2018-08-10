@@ -46,17 +46,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ActionsClass.cs" />
+    <Compile Include="DeviceInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceInstance.Designer.cs">
+      <DependentUpon>DeviceInstance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeviceTab.Designer.cs">
+      <DependentUpon>DeviceTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MACAddress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MACAddress.Designer.cs">
+      <DependentUpon>MACAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVMConfigurator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MVMConfigurator.Designer.cs">
+      <DependentUpon>MVMConfigurator.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserScene.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserScene.Designer.cs">
+      <DependentUpon>UserScene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserScenes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserScenes.Designer.cs">
+      <DependentUpon>UserScenes.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DeviceInstance.resx">
+      <DependentUpon>DeviceInstance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeviceTab.resx">
+      <DependentUpon>DeviceTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MACAddress.resx">
+      <DependentUpon>MACAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVMConfigurator.resx">
+      <DependentUpon>MVMConfigurator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\WpfApp.DeviceInstance.resources" />
+    <EmbeddedResource Include="obj\Debug\WpfApp.DeviceTab.resources" />
+    <EmbeddedResource Include="obj\Debug\WpfApp.MACAddress.resources" />
+    <EmbeddedResource Include="obj\Debug\WpfApp.MVMConfigurator.resources" />
+    <EmbeddedResource Include="obj\Debug\WpfApp.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\WpfApp.UserScene.resources" />
+    <EmbeddedResource Include="obj\Debug\WpfApp.UserScenes.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +116,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserScene.resx">
+      <DependentUpon>UserScene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserScenes.resx">
+      <DependentUpon>UserScenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\WpfApp.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\WpfApp.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\WpfApp.csprojAssemblyReference.cache" />
     <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\Settings.settings">
@@ -79,7 +140,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\WpfApp.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
