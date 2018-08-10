@@ -1,9 +1,0 @@
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\bin\Debug\testConsoleApp.exe.config
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\bin\Debug\testConsoleApp.exe
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\bin\Debug\testConsoleApp.pdb
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\obj\Debug\testConsoleApp.csprojAssemblyReference.cache
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\obj\Debug\testConsoleApp.csproj.CoreCompileInputs.cache
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\obj\Debug\testConsoleApp.exe
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\obj\Debug\testConsoleApp.pdb
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\obj\Debug\testConsoleApp.Form1.resources
-C:\Users\joslynk\Desktop\C#\readXMLApplication\source\repos\testConsoleApp\testConsoleApp\obj\Debug\testConsoleApp.csproj.GenerateResource.cache
