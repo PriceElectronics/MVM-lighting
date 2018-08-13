@@ -1,0 +1,10 @@
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.DeviceInstance.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.DeviceTab.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.MACAddress.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.MVMConfigurator.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.Properties.Resources.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.UserScene.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.UserScenes.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.csproj.GenerateResource.cache
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.csproj.CoreCompileInputs.cache
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\WpfApp.csprojAssemblyReference.cache
