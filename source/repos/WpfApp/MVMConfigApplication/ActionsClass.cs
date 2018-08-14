@@ -6,7 +6,7 @@ namespace MVMConfigApplication
 {
     public class ActionsClass
     {
-        public static XmlDocument xmlFile = LoadXML();
+        public static XmlDocument xmlFile = loadDefaultXML();
         public static string[] default_sceneStrings = new string[4];
         public static string[] sceneStrings = new string[4];
         public static string xmlPath = "";
@@ -15,9 +15,18 @@ namespace MVMConfigApplication
         public static string bacPointRefPIC = "";
         public static string scenePointID = "";
 
-        
 
-        public static XmlDocument LoadXML(string xmlFilePath = "C:\\Users\\joslynk\\Documents\\SourceTree\\MVM-lighting\\template.xml")
+        public static XmlDocument loadDefaultXML()
+        {
+            System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
+            XmlDocument doc = new XmlDocument();
+
+            doc.Load(a.GetManifestResourceStream("MVMConfigApplication.Resources.template.xml"));
+
+            return doc;
+        }
+
+        public static XmlDocument LoadXML(string xmlFilePath)
         {
             XmlDocument doc = new XmlDocument();
 
@@ -63,9 +72,9 @@ namespace MVMConfigApplication
             return output;
         }
 
-        public static void findDeviceConnected()
+        public static void findDeviceConnected(XmlDocument doc)
         {
-            XmlNodeList list = xmlFile.GetElementsByTagName("treeElement");
+            XmlNodeList list = doc.GetElementsByTagName("treeElement");
             
             bool done = false;
             int i = 0;

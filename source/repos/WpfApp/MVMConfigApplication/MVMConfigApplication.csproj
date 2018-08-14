@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionsClass.cs" />
+    <Compile Include="AC_LocalResource Folder\Variables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Variables.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="DeviceInstance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,10 @@
     <Compile Include="UserScenes.Designer.cs">
       <DependentUpon>UserScenes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AC_LocalResource Folder\Variables.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Variables.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeviceInstance.resx">
       <DependentUpon>DeviceInstance.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,10 +166,12 @@
   <ItemGroup>
     <Content Include="bin\Debug\MVMConfigApplication.exe" />
     <Content Include="bin\Debug\MVMConfigApplication.pdb" />
+    <None Include="bin\Debug\template.xml" />
     <Content Include="obj\Debug\MVMConfigApplication.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WpfApp.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\WpfApp.exe" />
     <Content Include="obj\Debug\WpfApp.pdb" />
+    <EmbeddedResource Include="Resources\template.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />

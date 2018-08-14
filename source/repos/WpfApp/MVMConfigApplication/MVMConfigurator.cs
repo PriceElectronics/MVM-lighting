@@ -30,8 +30,8 @@ namespace MVMConfigApplication
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            xmlFile = ActionsClass.LoadXML();
-            ActionsClass.findDeviceConnected();
+            xmlFile = ActionsClass.loadDefaultXML();
+            ActionsClass.findDeviceConnected(xmlFile);
             ActionsClass.displaySceneList(xmlFile);
             ActionsClass.setXmlDocument(xmlFile);
 
@@ -56,9 +56,9 @@ namespace MVMConfigApplication
                 filepath = open.FileName;
 
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
-                xmlFile = ActionsClass.LoadXML(open.FileName);
 
-                ActionsClass.findDeviceConnected();
+                xmlFile = ActionsClass.LoadXML(open.FileName);
+                ActionsClass.findDeviceConnected(xmlFile);
                 ActionsClass.displaySceneList(xmlFile);
                 ActionsClass.setXmlDocument(xmlFile);
 

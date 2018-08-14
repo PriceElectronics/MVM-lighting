@@ -126,13 +126,13 @@ namespace MVMConfigApplication
         {
             if (groupBoxTab.Text.Equals("MVM Gateway"))
             {
-                deviceInstance.Text = ActionsClass.displaybacDevice(ActionsClass.LoadXML(), "pic", "devInst");
-                macAddress.Text = ActionsClass.displaybacDevice(ActionsClass.LoadXML(), "pic", "macAddr");
+                deviceInstance.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "pic", "devInst");
+                macAddress.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "pic", "macAddr");
             }
             else if (groupBoxTab.Text.IndexOf("Sensor", StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                deviceInstance.Text = ActionsClass.displaybacDevice(ActionsClass.LoadXML(), "sensor", "devInst");
-                macAddress.Text = ActionsClass.displaybacDevice(ActionsClass.LoadXML(), "sensor", "macAddr");
+                deviceInstance.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "sensor", "devInst");
+                macAddress.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "sensor", "macAddr");
             }
         }
 
