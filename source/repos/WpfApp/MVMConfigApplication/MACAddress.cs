@@ -23,12 +23,6 @@ namespace MVMConfigApplication
             set { macString.Text = value; }
         }
 
-        public bool Checked
-        {
-            get { return modMAC.Checked; }
-            set { modMAC.Checked = value; }
-        }
-
         public string TextCMD
         {
             get { return cmd.Text; }
@@ -42,7 +36,6 @@ namespace MVMConfigApplication
             if (e.KeyChar == (char)Keys.Enter)
             {
                 ActionsClass.saveMACAddr(ActionsClass.xmlFile, "pic", macString.Text, "devInst", macString.Text);
-                modMAC.Checked = true;
                 cmd.Text = "Modified";
             }
 

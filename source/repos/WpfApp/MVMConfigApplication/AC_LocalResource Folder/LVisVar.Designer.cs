@@ -22,14 +22,14 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Variables {
+    internal class LVisVar {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Variables() {
+        internal LVisVar() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MVMConfigApplication.AC_LocalResource_Folder.Variables", typeof(Variables).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MVMConfigApplication.AC_LocalResource_Folder.LVisVar", typeof(LVisVar).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;bacDevice&quot;.
+        ///   Looks up a localized string similar to bacDevice.
         /// </summary>
         internal static string bacDeviceTag {
             get {
@@ -70,7 +70,16 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;devName&quot;.
+        ///   Looks up a localized string similar to devInst.
+        /// </summary>
+        internal static string device_instance {
+            get {
+                return ResourceManager.GetString("device_instance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to devName.
         /// </summary>
         internal static string device_name {
             get {
@@ -79,16 +88,7 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;devInst&quot;.
-        /// </summary>
-        internal static string DI {
-            get {
-                return ResourceManager.GetString("DI", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &quot;id&quot;.
+        ///   Looks up a localized string similar to id.
         /// </summary>
         internal static string ID {
             get {
@@ -97,7 +97,16 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;macAddr&quot;.
+        ///   Looks up a localized string similar to LvTextCtrl.
+        /// </summary>
+        internal static string lv {
+            get {
+                return ResourceManager.GetString("lv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to macAddr.
         /// </summary>
         internal static string MAC {
             get {
@@ -106,7 +115,7 @@ namespace MVMConfigApplication.AC_LocalResource_Folder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;name&quot;.
+        ///   Looks up a localized string similar to name.
         /// </summary>
         internal static string name {
             get {

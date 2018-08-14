@@ -31,7 +31,6 @@
             this.MACbox = new System.Windows.Forms.GroupBox();
             this.cmd = new System.Windows.Forms.Label();
             this.macString = new System.Windows.Forms.TextBox();
-            this.modMAC = new System.Windows.Forms.CheckBox();
             this.MACbox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,7 +38,6 @@
             // 
             this.MACbox.Controls.Add(this.cmd);
             this.MACbox.Controls.Add(this.macString);
-            this.MACbox.Controls.Add(this.modMAC);
             this.MACbox.Location = new System.Drawing.Point(0, 0);
             this.MACbox.Name = "MACbox";
             this.MACbox.Size = new System.Drawing.Size(200, 100);
@@ -50,7 +48,7 @@
             // cmd
             // 
             this.cmd.AutoSize = true;
-            this.cmd.Location = new System.Drawing.Point(46, 66);
+            this.cmd.Location = new System.Drawing.Point(53, 60);
             this.cmd.Name = "cmd";
             this.cmd.Size = new System.Drawing.Size(101, 13);
             this.cmd.TabIndex = 2;
@@ -59,23 +57,13 @@
             // macString
             // 
             this.macString.Enabled = false;
-            this.macString.Location = new System.Drawing.Point(43, 44);
+            this.macString.Location = new System.Drawing.Point(50, 37);
             this.macString.MaxLength = 127;
             this.macString.Name = "macString";
             this.macString.Size = new System.Drawing.Size(100, 20);
             this.macString.TabIndex = 1;
             this.macString.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.macString.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mac_Enter);
-            // 
-            // modMAC
-            // 
-            this.modMAC.AutoSize = true;
-            this.modMAC.Enabled = false;
-            this.modMAC.Location = new System.Drawing.Point(149, 47);
-            this.modMAC.Name = "modMAC";
-            this.modMAC.Size = new System.Drawing.Size(15, 14);
-            this.modMAC.TabIndex = 0;
-            this.modMAC.UseVisualStyleBackColor = true;
             // 
             // MACAddress
             // 
@@ -95,6 +83,5 @@
         private System.Windows.Forms.GroupBox MACbox;
         private System.Windows.Forms.Label cmd;
         private System.Windows.Forms.TextBox macString;
-        private System.Windows.Forms.CheckBox modMAC;
     }
 }

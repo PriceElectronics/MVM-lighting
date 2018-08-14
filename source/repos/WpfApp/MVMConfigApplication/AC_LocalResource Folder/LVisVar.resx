@@ -118,27 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="bacDeviceTag" xml:space="preserve">
-    <value>"bacDevice"</value>
+    <value>bacDevice</value>
     <comment>Tag name for BACnet device</comment>
   </data>
-  <data name="device_name" xml:space="preserve">
-    <value>"devName"</value>
-    <comment>Name of the device</comment>
-  </data>
-  <data name="DI" xml:space="preserve">
-    <value>"devInst"</value>
+  <data name="device_instance" xml:space="preserve">
+    <value>devInst</value>
     <comment>Device Instance</comment>
   </data>
+  <data name="device_name" xml:space="preserve">
+    <value>devName</value>
+    <comment>Name of the device</comment>
+  </data>
   <data name="ID" xml:space="preserve">
-    <value>"id"</value>
+    <value>id</value>
     <comment>ID of the device that is used in L-VIS</comment>
   </data>
+  <data name="lv" xml:space="preserve">
+    <value>LvTextCtrl</value>
+  </data>
   <data name="MAC" xml:space="preserve">
-    <value>"macAddr"</value>
+    <value>macAddr</value>
     <comment>MAC Address</comment>
   </data>
   <data name="name" xml:space="preserve">
-    <value>"name"</value>
+    <value>name</value>
     <comment>Variable name </comment>
   </data>
 </root>

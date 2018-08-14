@@ -30,7 +30,6 @@
         {
             this.scene = new System.Windows.Forms.GroupBox();
             this.cmd = new System.Windows.Forms.Label();
-            this.modScene = new System.Windows.Forms.CheckBox();
             this.stringScene = new System.Windows.Forms.TextBox();
             this.scene.SuspendLayout();
             this.SuspendLayout();
@@ -38,7 +37,6 @@
             // scene
             // 
             this.scene.Controls.Add(this.cmd);
-            this.scene.Controls.Add(this.modScene);
             this.scene.Controls.Add(this.stringScene);
             this.scene.Location = new System.Drawing.Point(3, 3);
             this.scene.Name = "scene";
@@ -50,25 +48,15 @@
             // cmd
             // 
             this.cmd.AutoSize = true;
-            this.cmd.Location = new System.Drawing.Point(24, 42);
+            this.cmd.Location = new System.Drawing.Point(27, 42);
             this.cmd.Name = "cmd";
             this.cmd.Size = new System.Drawing.Size(0, 13);
             this.cmd.TabIndex = 2;
             // 
-            // modScene
-            // 
-            this.modScene.AutoSize = true;
-            this.modScene.Enabled = false;
-            this.modScene.Location = new System.Drawing.Point(131, 22);
-            this.modScene.Name = "modScene";
-            this.modScene.Size = new System.Drawing.Size(15, 14);
-            this.modScene.TabIndex = 1;
-            this.modScene.UseVisualStyleBackColor = true;
-            // 
             // stringScene
             // 
             this.stringScene.Enabled = false;
-            this.stringScene.Location = new System.Drawing.Point(25, 19);
+            this.stringScene.Location = new System.Drawing.Point(28, 19);
             this.stringScene.Name = "stringScene";
             this.stringScene.Size = new System.Drawing.Size(100, 20);
             this.stringScene.TabIndex = 0;
@@ -92,7 +80,6 @@
 
         private System.Windows.Forms.GroupBox scene;
         private System.Windows.Forms.TextBox stringScene;
-        private System.Windows.Forms.CheckBox modScene;
         private System.Windows.Forms.Label cmd;
     }
 }

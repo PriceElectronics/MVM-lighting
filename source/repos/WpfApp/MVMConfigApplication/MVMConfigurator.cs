@@ -31,17 +31,12 @@ namespace MVMConfigApplication
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             xmlFile = ActionsClass.loadDefaultXML();
-            ActionsClass.findDeviceConnected(xmlFile);
-            ActionsClass.displaySceneList(xmlFile);
-            ActionsClass.setXmlDocument(xmlFile);
+            show();
 
             //Load file path
-            deviceTab.cmdLine = ("Loaded " + filepath);
             deviceTab.showDefaultProperties();
             deviceTab2.showDefaultProperties();
             userScenes.showDefaultProperties();
-
-            showDisplay();
         }
 
         //Open file
@@ -58,15 +53,12 @@ namespace MVMConfigApplication
                 StreamReader read = new StreamReader(File.OpenRead(open.FileName));
 
                 xmlFile = ActionsClass.LoadXML(open.FileName);
-                ActionsClass.findDeviceConnected(xmlFile);
-                ActionsClass.displaySceneList(xmlFile);
-                ActionsClass.setXmlDocument(xmlFile);
+
+                show();
 
                 deviceTab.showProperties(xmlFile);
                 deviceTab2.showProperties(xmlFile);
                 userScenes.showProperties();
-
-                showDisplay();
 
                 read.Dispose();
             }
@@ -74,6 +66,14 @@ namespace MVMConfigApplication
             
         }
         
+        private void show()
+        {
+            ActionsClass.findDeviceConnected(xmlFile);
+            ActionsClass.displaySceneList(xmlFile);
+            ActionsClass.setXmlDocument(xmlFile);
+            showDisplay();
+        }
+
         private void showDisplay()
         {
             //Load file path

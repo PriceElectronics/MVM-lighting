@@ -74,7 +74,6 @@
             // 
             // macAddress
             // 
-            this.macAddress.Checked = false;
             this.macAddress.Location = new System.Drawing.Point(79, 194);
             this.macAddress.Name = "macAddress";
             this.macAddress.Size = new System.Drawing.Size(210, 110);
@@ -84,7 +83,6 @@
             // deviceInstance
             // 
             this.deviceInstance.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.deviceInstance.Checked = false;
             this.deviceInstance.Location = new System.Drawing.Point(79, 44);
             this.deviceInstance.Margin = new System.Windows.Forms.Padding(0);
             this.deviceInstance.Name = "deviceInstance";

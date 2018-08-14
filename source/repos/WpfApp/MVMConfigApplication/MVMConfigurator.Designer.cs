@@ -138,11 +138,9 @@
             this.deviceTab.cmdLine = "Click \"New\" or \"Open\" to Continue";
             this.deviceTab.deviceTabText = this.tabPage1.Text;
             this.deviceTab.DI = "";
-            this.deviceTab.DIChecked = false;
             this.deviceTab.DIcmd = "";
             this.deviceTab.Location = new System.Drawing.Point(28, 15);
             this.deviceTab.MAC = "";
-            this.deviceTab.MACChecked = false;
             this.deviceTab.MACcmd = "";
             this.deviceTab.Name = "deviceTab";
             this.deviceTab.Size = new System.Drawing.Size(377, 440);
@@ -164,11 +162,9 @@
             this.deviceTab2.cmdLine = "Click \"New\" or \"Open\" to Continue";
             this.deviceTab2.deviceTabText = this.tabPage2.Text;
             this.deviceTab2.DI = "";
-            this.deviceTab2.DIChecked = false;
             this.deviceTab2.DIcmd = "";
             this.deviceTab2.Location = new System.Drawing.Point(28, 15);
             this.deviceTab2.MAC = "";
-            this.deviceTab2.MACChecked = false;
             this.deviceTab2.MACcmd = "";
             this.deviceTab2.Name = "deviceTab2";
             this.deviceTab2.Size = new System.Drawing.Size(377, 440);
@@ -190,13 +186,9 @@
             this.userScenes.cmdLine = "Click \"New\" or \"Open\" to Continue";
             this.userScenes.Location = new System.Drawing.Point(23, 15);
             this.userScenes.Name = "userScenes";
-            this.userScenes.scene1_Checked = false;
             this.userScenes.scene1_cmd = "";
-            this.userScenes.scene2_Checked = false;
             this.userScenes.scene2_cmd = "";
-            this.userScenes.scene3_Checked = false;
             this.userScenes.scene3_cmd = "";
-            this.userScenes.scene4_Checked = false;
             this.userScenes.scene4_cmd = "";
             this.userScenes.sceneTabText = "deviceTab";
             this.userScenes.Size = new System.Drawing.Size(377, 440);

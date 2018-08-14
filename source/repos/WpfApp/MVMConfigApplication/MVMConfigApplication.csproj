@@ -47,12 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionsClass.cs" />
-    <Compile Include="AC_LocalResource Folder\Variables.Designer.cs">
+    <Compile Include="AC_LocalResource Folder\LVisVar.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Variables.resx</DependentUpon>
+      <DependentUpon>LVisVar.resx</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="DeviceInstance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,9 +90,9 @@
     <Compile Include="UserScenes.Designer.cs">
       <DependentUpon>UserScenes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AC_LocalResource Folder\Variables.resx">
+    <EmbeddedResource Include="AC_LocalResource Folder\LVisVar.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Variables.Designer.cs</LastGenOutput>
+      <LastGenOutput>LVisVar.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DeviceInstance.resx">
       <DependentUpon>DeviceInstance.cs</DependentUpon>

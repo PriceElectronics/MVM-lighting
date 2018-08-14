@@ -39,12 +39,6 @@ namespace MVMConfigApplication
             set { userScene1.Text = value; }
         }
 
-        public bool scene1_Checked
-        {
-            get { return userScene1.Checked; }
-            set { userScene1.Checked = value; }
-        }
-
         public string scene1_cmd
         {
             get { return userScene1.TextCMD; }
@@ -56,12 +50,6 @@ namespace MVMConfigApplication
         {
             get { return userScene2.Text; }
             set { userScene2.Text = value; }
-        }
-
-        public bool scene2_Checked
-        {
-            get { return userScene2.Checked; }
-            set { userScene2.Checked = value; }
         }
 
         public string scene2_cmd
@@ -77,12 +65,6 @@ namespace MVMConfigApplication
             set { userScene3.Text = value; }
         }
 
-        public bool scene3_Checked
-        {
-            get { return userScene3.Checked; }
-            set { userScene3.Checked = value; }
-        }
-
         public string scene3_cmd
         {
             get { return userScene3.TextCMD; }
@@ -94,12 +76,6 @@ namespace MVMConfigApplication
         {
             get { return userScene4.Text; }
             set { userScene4.Text = value; }
-        }
-
-        public bool scene4_Checked
-        {
-            get { return userScene4.Checked; }
-            set { userScene4.Checked = value; }
         }
 
         public string scene4_cmd
@@ -139,11 +115,6 @@ namespace MVMConfigApplication
                     userScene3.TextCMD = "Saved";
                     userScene4.TextCMD = "Saved";
 
-                    userScene1.Checked = true;
-                    userScene2.Checked = true;
-                    userScene3.Checked = true;
-                    userScene4.Checked = true;
-
                 }
             }
         }
@@ -153,12 +124,6 @@ namespace MVMConfigApplication
         {
             save.Enabled = true;
             reset.Enabled = true;
-
-            userScene1.Checked = false;
-            userScene2.Checked = false;
-            userScene3.Checked = false;
-            userScene4.Checked = false;
-
             showDefaultProperties();
 
         }

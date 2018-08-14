@@ -23,12 +23,6 @@ namespace MVMConfigApplication
             set { stringDI.Text = value; }
         }
 
-        public bool Checked
-        {
-            get { return modDI.Checked; }
-            set { modDI.Checked = value; }
-        }
-
         public string TextCMD
         {
             get { return cmd.Text; }
@@ -42,7 +36,6 @@ namespace MVMConfigApplication
             if (e.KeyChar == (char)Keys.Enter)
             {
                 ActionsClass.saveMACAddr(ActionsClass.xmlFile, "pic", stringDI.Text, "devInst", stringDI.Text);
-                modDI.Checked = true;
                 cmd.Text = "Modified";
             }
             

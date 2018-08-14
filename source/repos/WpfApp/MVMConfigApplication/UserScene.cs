@@ -24,12 +24,6 @@ namespace MVMConfigApplication
             set { stringScene.Text = value; }
         }
 
-        public bool Checked
-        {
-            get { return modScene.Checked; }
-            set { modScene.Checked = value; }
-        }
-
         public string TextCMD
         {
             get { return cmd.Text; }
@@ -55,7 +49,6 @@ namespace MVMConfigApplication
             if (e.KeyChar == (char)Keys.Enter)
             {
                 ActionsClass.setScene(sceneNumber, stringScene.Text);
-                modScene.Checked = true;
                 cmd.Text = "Modified";
             }
         }
@@ -69,13 +62,12 @@ namespace MVMConfigApplication
         public void getScene(int index)
         {
             stringScene.Text = ActionsClass.getScene(index);
-            cmd.Text = "Press Enter to Save";
         }
         
         public void getdefaultScene(int index)
         {
             stringScene.Text = ActionsClass.getdefaultScene(index);
-            cmd.Text = "Press Enter to Save";
         }
+
     }
 }

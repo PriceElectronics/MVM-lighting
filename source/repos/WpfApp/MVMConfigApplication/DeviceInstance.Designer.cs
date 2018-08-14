@@ -30,7 +30,6 @@
         {
             this.DIBox = new System.Windows.Forms.GroupBox();
             this.cmd = new System.Windows.Forms.Label();
-            this.modDI = new System.Windows.Forms.CheckBox();
             this.stringDI = new System.Windows.Forms.TextBox();
             this.DIBox.SuspendLayout();
             this.SuspendLayout();
@@ -38,7 +37,6 @@
             // DIBox
             // 
             this.DIBox.Controls.Add(this.cmd);
-            this.DIBox.Controls.Add(this.modDI);
             this.DIBox.Controls.Add(this.stringDI);
             this.DIBox.Location = new System.Drawing.Point(0, 0);
             this.DIBox.Name = "DIBox";
@@ -50,26 +48,16 @@
             // cmd
             // 
             this.cmd.AutoSize = true;
-            this.cmd.Location = new System.Drawing.Point(46, 60);
+            this.cmd.Location = new System.Drawing.Point(53, 60);
             this.cmd.Name = "cmd";
             this.cmd.Size = new System.Drawing.Size(101, 13);
             this.cmd.TabIndex = 2;
             this.cmd.Text = "Press Enter to Save";
             // 
-            // modDI
-            // 
-            this.modDI.AutoSize = true;
-            this.modDI.Enabled = false;
-            this.modDI.Location = new System.Drawing.Point(149, 40);
-            this.modDI.Name = "modDI";
-            this.modDI.Size = new System.Drawing.Size(15, 14);
-            this.modDI.TabIndex = 1;
-            this.modDI.UseVisualStyleBackColor = true;
-            // 
             // stringDI
             // 
             this.stringDI.Enabled = false;
-            this.stringDI.Location = new System.Drawing.Point(43, 37);
+            this.stringDI.Location = new System.Drawing.Point(50, 37);
             this.stringDI.Name = "stringDI";
             this.stringDI.Size = new System.Drawing.Size(100, 20);
             this.stringDI.TabIndex = 0;
@@ -93,7 +81,6 @@
 
         private System.Windows.Forms.GroupBox DIBox;
         private System.Windows.Forms.TextBox stringDI;
-        private System.Windows.Forms.CheckBox modDI;
         private System.Windows.Forms.Label cmd;
     }
 }

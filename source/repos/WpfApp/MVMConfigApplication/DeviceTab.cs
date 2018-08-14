@@ -33,12 +33,6 @@ namespace MVMConfigApplication
             set { deviceInstance.Text = value; }
         }
 
-        public bool DIChecked
-        {
-            get { return deviceInstance.Checked; }
-            set { deviceInstance.Checked = value; }
-        }
-
         public string DIcmd
         {
             get { return deviceInstance.TextCMD; }
@@ -51,12 +45,6 @@ namespace MVMConfigApplication
         {
             get { return macAddress.Text; }
             set { macAddress.Text = value; }
-        }
-
-        public bool MACChecked
-        {
-            get { return deviceInstance.Checked; }
-            set { deviceInstance.Checked = value; }
         }
 
         public string MACcmd
@@ -99,10 +87,7 @@ namespace MVMConfigApplication
                     write.Dispose();
 
                     macAddress.TextCMD = "Saved";
-                    macAddress.Checked = true;
-
                     deviceInstance.TextCMD = "Saved";
-                    deviceInstance.Checked = true;
 
                     
                 }
@@ -115,24 +100,23 @@ namespace MVMConfigApplication
             showDefaultProperties();
             showDisplay();
 
-            deviceInstance.Checked = false;
-            macAddress.Checked = false;
-
             deviceInstance.TextCMD = "Press Enter to Save";
             macAddress.TextCMD = "Press Enter to Save";
         }
 
         public void showDefaultProperties()
         {
+            XmlDocument doc = ActionsClass.loadDefaultXML();
+
             if (groupBoxTab.Text.Equals("MVM Gateway"))
             {
-                deviceInstance.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "pic", "devInst");
-                macAddress.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "pic", "macAddr");
+                deviceInstance.Text = ActionsClass.displaybacDevice(doc, "pic", "devInst");
+                macAddress.Text = ActionsClass.displaybacDevice(doc, "pic", "macAddr");
             }
             else if (groupBoxTab.Text.IndexOf("Sensor", StringComparison.OrdinalIgnoreCase) >= 0)
             {
-                deviceInstance.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "sensor", "devInst");
-                macAddress.Text = ActionsClass.displaybacDevice(ActionsClass.loadDefaultXML(), "sensor", "macAddr");
+                deviceInstance.Text = ActionsClass.displaybacDevice(doc, "sensor", "devInst");
+                macAddress.Text = ActionsClass.displaybacDevice(doc, "sensor", "macAddr");
             }
         }
 

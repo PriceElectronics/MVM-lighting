@@ -87,7 +87,6 @@
             // 
             // userScene4
             // 
-            this.userScene4.Checked = false;
             this.userScene4.Location = new System.Drawing.Point(192, 197);
             this.userScene4.Name = "userScene4";
             this.userScene4.Size = new System.Drawing.Size(167, 74);
@@ -98,7 +97,6 @@
             // 
             // userScene3
             // 
-            this.userScene3.Checked = false;
             this.userScene3.Location = new System.Drawing.Point(6, 197);
             this.userScene3.Name = "userScene3";
             this.userScene3.Size = new System.Drawing.Size(167, 74);
@@ -109,7 +107,6 @@
             // 
             // userScene2
             // 
-            this.userScene2.Checked = false;
             this.userScene2.Location = new System.Drawing.Point(192, 76);
             this.userScene2.Name = "userScene2";
             this.userScene2.Size = new System.Drawing.Size(167, 74);
@@ -120,7 +117,6 @@
             // 
             // userScene1
             // 
-            this.userScene1.Checked = false;
             this.userScene1.Location = new System.Drawing.Point(6, 76);
             this.userScene1.Name = "userScene1";
             this.userScene1.Size = new System.Drawing.Size(167, 74);

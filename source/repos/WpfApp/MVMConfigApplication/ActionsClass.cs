@@ -7,14 +7,22 @@ namespace MVMConfigApplication
     public class ActionsClass
     {
         public static XmlDocument xmlFile = loadDefaultXML();
-        public static string[] default_sceneStrings = new string[4];
-        public static string[] sceneStrings = new string[4];
-        public static string xmlPath = "";
+        public static int userSceneNum = 4;
+        public static string[] default_sceneStrings = new string[userSceneNum];
+        public static string[] sceneStrings = new string[userSceneNum];
+
         public static string bacDeviceID = "";
         public static string bacPointRefSensor = "";
         public static string bacPointRefPIC = "";
         public static string scenePointID = "";
 
+        public static string device_instance = AC_LocalResource_Folder.LVisVar.device_instance;
+        public static string MAC = AC_LocalResource_Folder.LVisVar.MAC;
+        public static string ID = AC_LocalResource_Folder.LVisVar.ID;
+        public static string device_name = AC_LocalResource_Folder.LVisVar.device_name;
+        public static string bacDeviceTag = AC_LocalResource_Folder.LVisVar.bacDeviceTag;
+        public static string name = AC_LocalResource_Folder.LVisVar.name;
+        public static string lv = AC_LocalResource_Folder.LVisVar.lv;
 
         public static XmlDocument loadDefaultXML()
         {
@@ -41,24 +49,23 @@ namespace MVMConfigApplication
         //output the string that contains the property value 
         public static string displaybacDevice(XmlDocument doc, string name, string property)
         {
-            XmlNodeList list = doc.GetElementsByTagName("bacDevice");
-            string[] properties = new string[] { "id", "devInst", "macAddr", "devName" }; //don't think i use this
+            XmlNodeList list = doc.GetElementsByTagName(bacDeviceTag);
             string output = "";
             int hex2int = 0;
 
             for (int i = 0; i < list.Count; i++)
             {
                 XmlNode node = list[i];
-                String devName = node.Attributes["devName"].InnerText;
+                String devName = node.Attributes[device_name].InnerText;
 
                 if (node != null)
                 {
                     //if devName is the same as name specified
                     if ((devName.IndexOf(name, StringComparison.OrdinalIgnoreCase) >= 0) && (property != null))
                     {
-                        bacDeviceID = node.Attributes["id"].InnerText; //gen0x00a00005
+                        bacDeviceID = node.Attributes[ID].InnerText; 
                         output = node.Attributes[property].InnerText;
-                        if (property.CompareTo("macAddr") >= 0)
+                        if (property.CompareTo(MAC) >= 0)
                         {
                             hex2int = Convert.ToInt32(output, 16);
                             output = hex2int.ToString();
@@ -81,78 +88,71 @@ namespace MVMConfigApplication
 
             while ((i < list.Count) && (done == false))
             {
-                XmlNode node = list[i];
-                if (node.Attributes["name"].InnerText.Equals("Client Mappings"))
-                {
-                    XmlNode deviceNode = node.FirstChild;
-
-                    while (deviceNode != null)
-                    {
-                        //Find sensor bacPointRef
-                        if (deviceNode.Attributes["name"].InnerText.IndexOf("sensor", StringComparison.InvariantCultureIgnoreCase) >= 0)
-                        {
-                            XmlNode propertyNode = deviceNode.FirstChild;
-
-                            while (propertyNode != null)
-                            {
-                                if (propertyNode.Attributes["name"].InnerText.Equals("Occupancy Status_Read"))
-                                {
-                                    XmlNode pointNode = propertyNode.FirstChild;
-
-                                    while (pointNode != null)
-                                    {
-                                        if (pointNode.Name.Equals("bacMapping"))
-                                        {
-                                            bacPointRefSensor = pointNode.Attributes["bacPointRef"].InnerText; //gen0x00800001
-                                        }
-                                        pointNode = pointNode.NextSibling;
-                                    }
-                                }
-                                propertyNode = propertyNode.NextSibling;
-                            }
-                        }
-
-                        //Find PIC bacPointRef
-                        if (deviceNode.Attributes["name"].InnerText.IndexOf("pic", StringComparison.InvariantCultureIgnoreCase) >= 0)
-                        {
-                            XmlNode propertyNode = deviceNode.FirstChild;
-
-                            while (propertyNode != null)
-                            {
-                                if (propertyNode.Attributes["name"].InnerText.Equals("Light Scene_Value"))
-                                {
-                                    scenePointID = propertyNode.Attributes["id"].InnerText;
-                                    XmlNode pointNode = propertyNode.FirstChild;
-
-                                    while (pointNode != null)
-                                    {
-                                        if (pointNode.Name.Equals("bacMapping"))
-                                        {
-                                            bacPointRefPIC = pointNode.Attributes["bacPointRef"].InnerText;
-                                        }
-                                        pointNode = pointNode.NextSibling;
-                                    }
-
-                                }
-                                propertyNode = propertyNode.NextSibling;
-                            }
-                        }
-
-                        if ((!string.IsNullOrEmpty(bacPointRefPIC)) && (!string.IsNullOrEmpty(bacPointRefSensor)))
-                        {
-                            done = true;
-                        }
-                        deviceNode = deviceNode.NextSibling;
-                    }
-                }
+                done = getElement_ClientMapping(list, i, done);
                 i++;
                 
             }
         }
 
+        public static bool getElement_ClientMapping(XmlNodeList list, int index, bool done)
+        {
+            XmlNode node = list[index];
+            if (node.Attributes[name].InnerText.Equals("Client Mappings"))
+            {
+                XmlNode deviceNode = node.FirstChild;
+
+                while (deviceNode != null)
+                {
+                    bacPointRefPIC = setRefID(deviceNode, "pic", "Light Scene_Value",bacPointRefPIC);
+                    bacPointRefSensor = setRefID(deviceNode, "sensor", "Occupancy Status_Read", bacPointRefSensor);
+
+                    if ((!string.IsNullOrEmpty(bacPointRefPIC)) && (!string.IsNullOrEmpty(bacPointRefSensor)))
+                    {
+                        done = true;
+                    }
+                    deviceNode = deviceNode.NextSibling;
+                }
+            }
+            return done;
+        }
+
+        public static string setRefID(XmlNode deviceNode, string bacDevice, string propertyNodeName, string refPointID)
+        {
+            if (deviceNode.Attributes[name].InnerText.IndexOf(bacDevice, StringComparison.InvariantCultureIgnoreCase) >= 0)
+            {
+                XmlNode propertyNode = deviceNode.FirstChild;
+
+                while (propertyNode != null)
+                {
+                    if (propertyNode.Attributes[name].InnerText.Equals(propertyNodeName))
+                    {
+                        XmlNode pointNode = propertyNode.FirstChild;
+
+                        if (propertyNodeName.Equals("Light Scene_Value"))
+                        {
+                            scenePointID = propertyNode.Attributes[ID].InnerText;
+                        }
+
+                        while (pointNode != null)
+                        {
+                            if (pointNode.Name.Equals("bacMapping"))
+                            {
+                                refPointID = pointNode.Attributes["bacPointRef"].InnerText;
+                            }
+                            pointNode = pointNode.NextSibling;
+                        }
+
+                    }
+                    propertyNode = propertyNode.NextSibling;
+                }
+            }
+
+            return refPointID;
+        }
+
         public static void displaySceneList(XmlDocument doc)
         {
-            XmlNodeList lvTextCtrl_list = doc.GetElementsByTagName("LvTextCtrl");
+            XmlNodeList lvTextCtrl_list = doc.GetElementsByTagName(lv);
             int j = 0;
 
             for (int i = 0; i < lvTextCtrl_list.Count; i++)
@@ -162,14 +162,14 @@ namespace MVMConfigApplication
                 if (lvTextNode != null)
                 {
                     XmlNode childNode = lvTextNode.FirstChild;
-                    string name = lvTextNode.Attributes["name"].InnerText;
+                    string sceneName = lvTextNode.Attributes[name].InnerText;
                     string UID = "";
 
                     while (childNode != null)
                     {
-                        if (name.Contains("Scene"))
+                        if (sceneName.Contains("Scene"))
                         {
-                            if (childNode.Name == "dpList")
+                            if (childNode.Name.Contains("dpList"))
                             {
                                 XmlNode lvDataPoint = childNode.FirstChild;
                                 UID = lvDataPoint.Attributes["UID"].InnerText;
@@ -192,12 +192,10 @@ namespace MVMConfigApplication
 
         }
 
-        
-
         public static void saveSceneTitle(XmlDocument doc)
         {
             int index = 0;
-            XmlNodeList lvTextCtrl_list = doc.GetElementsByTagName("LvTextCtrl");
+            XmlNodeList lvTextCtrl_list = doc.GetElementsByTagName(lv);
 
             for (int i = 0; i < lvTextCtrl_list.Count; i++)
             {
@@ -206,7 +204,7 @@ namespace MVMConfigApplication
                 if (lvTextNode != null)
                 {
                     XmlNode childNode = lvTextNode.FirstChild;
-                    string name = lvTextNode.Attributes["name"].InnerText;
+                    string sceneName = lvTextNode.Attributes[name].InnerText;
                     string UID = "";
 
                     while (childNode != null)
@@ -216,7 +214,7 @@ namespace MVMConfigApplication
                             XmlNode lvDataPoint = childNode.FirstChild;
                             UID = lvDataPoint.Attributes["UID"].InnerText;
                         }
-                        else if ((UID.Equals(scenePointID)) && (childNode.Name == "text") && (name.Contains("Scene")) && (index < sceneStrings.GetLength(0)))
+                        else if ((UID.Equals(scenePointID)) && (childNode.Name == "text") && (sceneName.Contains("Scene")) && (index < sceneStrings.GetLength(0)))
                         {
                             childNode.InnerText = sceneStrings[index];
                             index++;
@@ -234,18 +232,18 @@ namespace MVMConfigApplication
 
             if (doc != null)
             {
-                XmlNodeList list = doc.GetElementsByTagName("bacDevice");
+                XmlNodeList list = doc.GetElementsByTagName(bacDeviceTag);
 
                 for (int i = 0; i < list.Count; i++)
                 {
                     XmlNode node = list[i];
-                    String devName = node.Attributes["devName"].InnerText;
+                    String devName = node.Attributes[device_name].InnerText;
                     if (devName.IndexOf(name, StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         switch (prop)
                         {
                             case "macAddr":
-                                if (devInst.Equals(node.Attributes["devInst"].InnerText))
+                                if (devInst.Equals(node.Attributes[device_instance].InnerText)) //Check if device instance is the same for both
                                 {
                                     node.Attributes[prop].InnerText = int2hex.ToString("X2");
                                 }
