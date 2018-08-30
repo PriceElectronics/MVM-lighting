@@ -13,3 +13,4 @@ C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfig
 C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\MVMConfigApplication.exe
 C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\MVMConfigApplication.pdb
 C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\MVMConfigApplication.AC_LocalResource_Folder.LVisVar.resources
+C:\Users\joslynk\Documents\SourceTree\MVM-lighting\source\repos\WpfApp\MVMConfigApplication\obj\Debug\MVMConfigApplication.csprojAssemblyReference.cache

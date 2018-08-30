@@ -43,6 +43,7 @@ namespace MVMConfigApplication
                 doc.Load(xmlFilePath);
             }
 
+
             return doc;
         }
 
@@ -75,7 +76,6 @@ namespace MVMConfigApplication
                 }
             }
 
-            
             return output;
         }
 
